@@ -1,0 +1,841 @@
+import { PharmaProduct } from '../types/pharma';
+
+export const PHARMA_PRODUCTS: PharmaProduct[] = [
+  {
+    id: 'aeth-001',
+    name: 'Ace 1000',
+    genericName: 'Metoprolol Succinate & Telmisartan Extended Release',
+    category: 'Cardiology',
+    dosageForm: 'Tablets',
+    strength: '50mg / 40mg',
+    indication: 'Essential Hypertension, Angina Pectoris, Post-Myocardial Infarction',
+    shortDescription: 'Dual-action 24-hour extended-release formulation for optimal blood pressure control and cardiovascular organ protection.',
+    fullOverview: 'Ace 1000 utilizes Hallmark’s proprietary Chrono-Release Matrix technology to deliver steady-state plasma concentrations of Metoprolol Succinate and Telmisartan over 24 hours. Ideal for stage 2 hypertension with comorbid coronary heart disease.',
+    keyBenefits: [
+      '24-hour sustained blood pressure stabilization with zero peak trough surges',
+      'Cardioprotective and nephroprotective dual target mechanisms',
+      'Enhanced patient compliance with once-daily dosing',
+      'Minimal risk of reflex tachycardia'
+    ],
+    composition: {
+      activeIngredient: 'Metoprolol Succinate USP / Telmisartan IP',
+      concentration: 'Metoprolol Succinate 47.5mg (Eq to 50mg Metoprolol Tartrate) + Telmisartan 40mg',
+      excipients: ['Microcrystalline Cellulose', 'Hypromellose K100M', 'Magnesium Stearate', 'Opadry Blue Film Coating']
+    },
+    dosageAndAdministration: 'One tablet once daily in the morning with or without food. Swallow whole, do not crush or chew.',
+    packagingInfo: '10 x 10 Alu-Alu Blister Pack with moisture barrier strip.',
+    storageConditions: 'Store below 25°C (77°F) protected from moisture and direct heat.',
+    shelfLife: '36 Months',
+    regulatoryApprovals: ['US FDA', 'EU EMA', 'WHO GMP', 'PMDA Japan'],
+    isFeatured: true,
+    leafletCode: 'PIL-CSXR-2026-V4',
+    imageUrl: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=800',
+    rxRequired: true
+  },
+  {
+    id: 'aeth-002',
+    name: 'Ace 1000 ER',
+    genericName: 'Osimertinib Mesylate Targeted Nanocapsules',
+    category: 'Oncology',
+    dosageForm: 'Capsules',
+    strength: '80mg',
+    indication: 'Metastatic Non-Small Cell Lung Cancer (NSCLC) with EGFR T790M Mutation',
+    shortDescription: 'Third-generation irreversible EGFR tyrosine kinase inhibitor targeted for mutated non-small cell lung carcinomas.',
+    fullOverview: 'Ace 1000 ER is a bio-enhanced lipid formulation providing superior blood-brain barrier permeability. Specifically engineered to bypass conventional T790M resistance mutations while preserving wild-type EGFR tissue.',
+    keyBenefits: [
+      'High central nervous system (CNS) lesion response rates',
+      'Selectively targets T790M resistance mutations over wild-type receptors',
+      'Significantly prolonged progression-free survival (PFS)',
+      'Substantially reduced skin rash and diarrhea toxicity profiles'
+    ],
+    composition: {
+      activeIngredient: 'Osimertinib Mesylate',
+      concentration: '80mg per hard gelatin targeted capsule',
+      excipients: ['Mannitol', 'Sodium Starch Glycolate', 'Titanium Dioxide', 'Targeted Lipidic Polymer Matrix']
+    },
+    dosageAndAdministration: '80mg orally once daily until disease progression or unacceptable toxicity.',
+    packagingInfo: '30 Capsule HDPE Child-Resistant Bottle with desiccant canister.',
+    storageConditions: 'Store between 20°C to 25°C. Excursions permitted to 15°C–30°C.',
+    shelfLife: '24 Months',
+    regulatoryApprovals: ['US FDA', 'EU EMA', 'TGA Australia'],
+    isFeatured: true,
+    leafletCode: 'PIL-OTEG-2026-V2',
+    imageUrl: 'https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&q=80&w=800',
+    rxRequired: true
+  },
+  {
+    id: 'aeth-003',
+    name: 'Ace Cold',
+    genericName: 'Levetiracetam & Pyridoxal-5-Phosphate Sublingual Tablet',
+    category: 'Neurology',
+    dosageForm: 'Tablets',
+    strength: '750mg / 25mg',
+    indication: 'Partial Onset Seizures, Myoclonic Seizures, Primary Generalized Tonic-Clonic Seizures',
+    shortDescription: 'Rapid-disintegration sublingual anti-epileptic tablet with active neuroprotective Pyridoxal co-factor support.',
+    fullOverview: 'Ace Cold modulates synaptic vesicle protein SV2A with ultra-rapid absorption. Synergized with active Vitamin B6 co-factor to mitigate cognitive fatigue and psychiatric side effects commonly seen in high-dose therapy.',
+    keyBenefits: [
+      'Sublingual disintegrating action within 18 seconds for rapid seizure abort',
+      'Reduced seizure frequency by up to 78% in clinical trials',
+      'Active Pyridoxal-5-Phosphate reduces neuro-behavioral adverse events',
+      'No liver enzyme P450 interactions'
+    ],
+    composition: {
+      activeIngredient: 'Levetiracetam IP / Pyridoxal-5-Phosphate',
+      concentration: '750mg Levetiracetam + 25mg P-5-P',
+      excipients: ['Crospovidone', 'Xylitol', 'Natural Spearmint Flavor', 'Magnesium Stearate']
+    },
+    dosageAndAdministration: '1 tablet twice daily sublingually. Dosage can be adjusted based on clinical response.',
+    packagingInfo: '6 x 10 Fast-Peel Tropical Blister Pack.',
+    storageConditions: 'Store below 30°C in a dry place away from sunlight.',
+    shelfLife: '36 Months',
+    regulatoryApprovals: ['US FDA', 'EU EMA', 'WHO GMP'],
+    isFeatured: true,
+    leafletCode: 'PIL-NCP-2026-V1',
+    imageUrl: 'https://images.unsplash.com/photo-1577401239170-897942555fb3?auto=format&fit=crop&q=80&w=800',
+    rxRequired: true
+  },
+  {
+    id: 'aeth-004',
+    name: 'AcePlus',
+    genericName: 'Fluticasone Furoate & Vilanterol Dry Powder Inhaler',
+    category: 'Respiratory',
+    dosageForm: 'Inhalers',
+    strength: '100mcg / 25mcg per actuation',
+    indication: 'Chronic Obstructive Pulmonary Disease (COPD) & Severe Asthma',
+    shortDescription: 'Next-generation single-breath inhaler delivering once-daily corticosteroid and ultra-LABA bronchodilation.',
+    fullOverview: 'AcePlus employs Hallmark’s MicroFlow inhalation device, engineered for low airflow resistance. Provides deep airway penetration even in patients with severely compromised lung inspiratory flow.',
+    keyBenefits: [
+      '24-hour continuous bronchodilation in a single daily inhalation',
+      'Consistent dose delivery irrespective of inspiratory flow rate',
+      'Built-in mechanical dose counter with visual lockout',
+      'Significant reduction in acute COPD exacerbation rates'
+    ],
+    composition: {
+      activeIngredient: 'Fluticasone Furoate & Vilanterol Trifenatate Micronized',
+      concentration: 'Fluticasone Furoate 100mcg + Vilanterol 25mcg per inhalation',
+      excipients: ['Lactose Monohydrate (Pharma grade low-fines)']
+    },
+    dosageAndAdministration: '1 inhalation once daily at the same time each day. Rinse mouth thoroughly after inhalation.',
+    packagingInfo: '30-Dose MicroFlow Ergonomic DPI Device in foil pouch.',
+    storageConditions: 'Store below 25°C in dry conditions. Use within 6 weeks of opening pouch.',
+    shelfLife: '24 Months',
+    regulatoryApprovals: ['US FDA', 'EU EMA', 'PMDA Japan'],
+    isFeatured: true,
+    leafletCode: 'PIL-PBDPI-2026-V3',
+    imageUrl: 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&q=80&w=800',
+    rxRequired: true
+  },
+  {
+    id: 'aeth-005',
+    name: 'AcePlus Drops',
+    genericName: 'Azithromycin Monohydrate Lyophilized Powder for Injection',
+    category: 'Anti-Infectives',
+    dosageForm: 'Injectables',
+    strength: '500mg Vial',
+    indication: 'Community-Acquired Pneumonia, Pelvic Inflammatory Disease, Severe Bacterial Sepsis',
+    shortDescription: 'Sterile, pyrogen-free lyophilized azithromycin for rapid intravenous infusion in acute bacterial hospital admissions.',
+    fullOverview: 'AcePlus Drops delivers high tissue penetration in lung parenchyma and phagocytic immune cells. Manufactured in Class A aseptic isolators with zero preservative contamination.',
+    keyBenefits: [
+      'Achieves high tissue concentration within 60 minutes of infusion',
+      'Excellent stability profile post-reconstitution in 0.9% NaCl or D5W',
+      'Low injection-site phlebitis due to ultra-pure formulation',
+      'Broad spectrum covering atypical pathogens (Mycoplasma, Chlamydia, Legionella)'
+    ],
+    composition: {
+      activeIngredient: 'Azithromycin Monohydrate Sterile USP',
+      concentration: '500mg per single-dose glass vial',
+      excipients: ['Citric Acid Anhydrous', 'Sodium Hydroxide (for pH adjustment to 6.5)']
+    },
+    dosageAndAdministration: '500mg IV once daily as a slow infusion over 60 minutes for 2 to 5 days, followed by oral transition.',
+    packagingInfo: 'Clear Type-I Borosilicate Glass Vial with Fluoropolymer Stopper and Flip-Off Seal.',
+    storageConditions: 'Store below 25°C. Reconstituted solution stable for 24h at room temperature.',
+    shelfLife: '36 Months',
+    regulatoryApprovals: ['US FDA', 'EU EMA', 'WHO GMP', 'ANVISA Brazil'],
+    isFeatured: false,
+    leafletCode: 'PIL-ZMIV-2026-V1',
+    imageUrl: 'https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&q=80&w=800',
+    rxRequired: true
+  },
+  {
+    id: 'aeth-006',
+    name: 'Dawnsi',
+    genericName: 'Empagliflozin & Linagliptin Bilayer Tablet',
+    category: 'Metabolic',
+    dosageForm: 'Tablets',
+    strength: '10mg / 5mg',
+    indication: 'Type 2 Diabetes Mellitus, Glycemic Control, Renal Protection & Heart Failure Prevention',
+    shortDescription: 'Synergistic dual SGLT2-inhibitor and DPP-4-inhibitor bilayer tablet for comprehensive glycemic and cardiovascular risk reduction.',
+    fullOverview: 'Dawnsi combines Empagliflozin and Linagliptin in a distinct bilayer formulation that prevents chemical cross-degradation while optimizing metabolic glucose clearance and pancreatic beta-cell protection.',
+    keyBenefits: [
+      'Dual glucose-lowering action without increasing hypoglycemia risk',
+      'Reduces HbA1c by up to 1.6% in 24 weeks',
+      'Proven reduction in cardiovascular death and diabetic kidney disease progression',
+      'Weight-neutral to weight-loss clinical outcomes'
+    ],
+    composition: {
+      activeIngredient: 'Empagliflozin / Linagliptin',
+      concentration: 'Empagliflozin 10mg + Linagliptin 5mg',
+      excipients: ['Lactose Monohydrate', 'Maize Starch', 'Croscarmellose Sodium', 'Iron Oxide Yellow']
+    },
+    dosageAndAdministration: '1 tablet taken once daily in the morning with or without food.',
+    packagingInfo: '3 x 10 Alu-Alu Blister Pack in tamper-evident carton.',
+    storageConditions: 'Store below 30°C in original package.',
+    shelfLife: '36 Months',
+    regulatoryApprovals: ['US FDA', 'EU EMA', 'WHO GMP'],
+    isFeatured: true,
+    leafletCode: 'PIL-GRS2-2026-V2',
+    imageUrl: 'https://images.unsplash.com/photo-1550572017-edd951baa742?auto=format&fit=crop&q=80&w=800',
+    rxRequired: true
+  },
+  {
+    id: 'aeth-007',
+    name: 'Ferohal-XT',
+    genericName: 'Upadacitinib Extended Release Tablets',
+    category: 'Immunology',
+    dosageForm: 'Tablets',
+    strength: '15mg',
+    indication: 'Moderate-to-Severe Rheumatoid Arthritis, Psoriatic Arthritis, Atopic Dermatitis, Ulcerative Colitis',
+    shortDescription: 'Selective JAK1 inhibitor engineered to suppress pro-inflammatory cytokine cascades with high target specificity.',
+    fullOverview: 'Ferohal-XT selectively inhibits Janus Kinase-1 signaling, delivering rapid symptom relief and structural joint/skin recovery across severe autoimmune conditions.',
+    keyBenefits: [
+      'Rapid suppression of joint stiffness and skin inflammation within 14 days',
+      'High JAK1 selectivity over JAK2/JAK3 reduces hematologic toxicity',
+      'Oral once-daily convenience eliminating subcutaneous injections',
+      'Sustained endoscopic remission in ulcerative colitis patients'
+    ],
+    composition: {
+      activeIngredient: 'Upadacitinib Free Base',
+      concentration: '15mg ER per tablet',
+      excipients: ['Microcrystalline Cellulose', 'Hypromellose', 'Tartaric Acid', 'Colloidal Silicon Dioxide']
+    },
+    dosageAndAdministration: '15mg once daily orally. Dosage adjustments required in severe renal impairment.',
+    packagingInfo: '28 Tablet HDPE Bottle with induction seal foil.',
+    storageConditions: 'Store below 25°C in dry conditions.',
+    shelfLife: '24 Months',
+    regulatoryApprovals: ['US FDA', 'EU EMA', 'TGA Australia'],
+    isFeatured: false,
+    leafletCode: 'PIL-IMJAK-2026-V1',
+    imageUrl: 'https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&q=80&w=800',
+    rxRequired: true
+  },
+  {
+    id: 'aeth-008',
+    name: 'Frebre S',
+    genericName: 'Vonoprazan Fumarate & Amoxicillin Gastro-Resistant Granules',
+    category: 'Gastroenterology',
+    dosageForm: 'Capsules',
+    strength: '20mg / 500mg',
+    indication: 'Helicobacter Pylori Eradication, Erosive Esophagitis, Reflux Peptic Ulcers',
+    shortDescription: 'Potent potassium-competitive acid blocker (P-CAB) co-formulated for high-rate H. Pylori bacterial clearance.',
+    fullOverview: 'Frebre S utilizes Vonoprazan, a revolutionary non-PPI acid inhibitor providing faster, stronger, and longer-lasting gastric acid suppression starting from day 1.',
+    keyBenefits: [
+      'Acid inhibition unaffected by meal timing or CYP2C19 genetic polymorphism',
+      'Eradicates H. pylori in over 92% of antibiotic-resistant cases',
+      'Instant gastric pH elevation above 6.0 within 3 hours',
+      'Superior esophageal ulcer healing compared to conventional Omeprazole'
+    ],
+    composition: {
+      activeIngredient: 'Vonoprazan Fumarate / Amoxicillin Trihydrate',
+      concentration: 'Vonoprazan 20mg + Amoxicillin 500mg per daily co-pack',
+      excipients: ['D-Mannitol', 'Hydroxypropyl Cellulose', 'Titanium Dioxide', 'Methacrylic Acid Copolymer']
+    },
+    dosageAndAdministration: 'Take one dose pack twice daily after meals for 14 days or as directed by a gastroenterologist.',
+    packagingInfo: '14-Day Convenient Compliance Blister Calendar Pack.',
+    storageConditions: 'Store below 25°C protected from moisture.',
+    shelfLife: '24 Months',
+    regulatoryApprovals: ['US FDA', 'EU EMA', 'PMDA Japan', 'WHO GMP'],
+    isFeatured: false,
+    leafletCode: 'PIL-GHDR-2026-V2',
+    imageUrl: 'https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&q=80&w=800',
+    rxRequired: true
+  },
+  {
+    id: 'aeth-009',
+    name: 'Kofup',
+    genericName: 'Bictegravir, Emtricitabine & Tenofovir Alafenamide',
+    category: 'Anti-Infectives',
+    dosageForm: 'Tablets',
+    strength: '50mg / 200mg / 25mg',
+    indication: 'HIV-1 Infection Suppression in Adults and Pediatric Patients',
+    shortDescription: 'Complete single-tablet regimen integrating integrase strand transfer inhibitor (INSTI) with dual NRTI backbone.',
+    fullOverview: 'Kofup provides complete viral suppression with high barrier to resistance and exceptional renal/bone safety profile via lower TAF dosing.',
+    keyBenefits: [
+      'High barrier to viral resistance with zero emergent INSTI resistance in phase 3 trials',
+      'Favorable renal and bone mineral density safety markers',
+      'Small, easy-to-swallow film-coated tablet',
+      'Flexible administration without food restriction requirements'
+    ],
+    composition: {
+      activeIngredient: 'Bictegravir Sodium / Emtricitabine / Tenofovir Alafenamide Hemifumarate',
+      concentration: 'Bictegravir 50mg + Emtricitabine 200mg + Tenofovir Alafenamide 25mg',
+      excipients: ['Microcrystalline Cellulose', 'Croscarmellose Sodium', 'Magnesium Stearate', 'Opadry II Blue']
+    },
+    dosageAndAdministration: '1 tablet once daily with or without food.',
+    packagingInfo: '30 Tablet HDPE Bottle with desiccants and child-resistant closure.',
+    storageConditions: 'Store in original container below 30°C.',
+    shelfLife: '36 Months',
+    regulatoryApprovals: ['US FDA', 'EU EMA', 'WHO GMP'],
+    isFeatured: true,
+    leafletCode: 'PIL-VSTA-2026-V3',
+    imageUrl: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=800',
+    rxRequired: true
+  },
+  {
+    id: 'aeth-010',
+    name: 'Kofup D Syrup',
+    genericName: 'Atorvastatin & Ezetimibe Micro-Coated Granules',
+    category: 'Cardiology',
+    dosageForm: 'Tablets',
+    strength: '20mg / 10mg',
+    indication: 'Hypercholesterolemia, Atherosclerotic Cardiovascular Disease (ASCVD) Prevention',
+    shortDescription: 'Dual inhibition of cholesterol synthesis and intestinal absorption for aggressive LDL-C target achievement.',
+    fullOverview: 'Kofup D Syrup combines HMG-CoA reductase inhibition with Niemann-Pick C1-Like 1 (NPC1L1) pathway blockade, lowering LDL-C by up to 65%.',
+    keyBenefits: [
+      'Achieves European & American guideline LDL-C targets (<55 mg/dL) in high-risk patients',
+      'Dual inhibition reduces required statin dose, minimizing muscle pain side effects',
+      'Significant plaque stabilization in coronary arteries',
+      'Consistent 24-hour cholesterol control'
+    ],
+    composition: {
+      activeIngredient: 'Atorvastatin Calcium Trihydrate / Ezetimibe USP',
+      concentration: 'Atorvastatin 20mg + Ezetimibe 10mg',
+      excipients: ['Calcium Carbonate', 'Lactose Monohydrate', 'Povidone K30', 'Sodium Lauryl Sulfate']
+    },
+    dosageAndAdministration: '1 tablet once daily in the evening with or without food.',
+    packagingInfo: '10 x 10 Alu-Alu Blister Strip.',
+    storageConditions: 'Store below 25°C in dark dry conditions.',
+    shelfLife: '36 Months',
+    regulatoryApprovals: ['US FDA', 'EU EMA', 'WHO GMP', 'Health Canada'],
+    isFeatured: false,
+    leafletCode: 'PIL-NVLS-2026-V1',
+    imageUrl: 'https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&q=80&w=800',
+    rxRequired: true
+  },
+  {
+    id: 'aeth-011',
+    name: 'Kofup LS',
+    genericName: 'Transdermal Buprenorphine Matrix Patch',
+    category: 'Neurology',
+    dosageForm: 'Topicals',
+    strength: '10mcg/hr Transdermal Patch',
+    indication: 'Chronic Intractable Pain, Severe Neuropathic Osteoarthritis',
+    shortDescription: '7-day continuous transdermal pain management patch utilizing non-invasive polymeric drug reservoir tech.',
+    fullOverview: 'Kofup LS delivers constant systemic buprenorphine over 168 hours via micro-pore skin absorption, providing steady analgesia without addiction spikes or pill burden.',
+    keyBenefits: [
+      '7-day continuous pain relief with a single waterproof patch application',
+      'Substantially lower risk of gastrointestinal irritation and constipation',
+      'Consistent plasma concentrations without nocturnal pain breakthrough',
+      'Breathable, skin-friendly hypoallergenic adhesive strip'
+    ],
+    composition: {
+      activeIngredient: 'Buprenorphine Base',
+      concentration: '10mcg release rate per hour (10mg total reservoir per patch)',
+      excipients: ['Polyisobutylene Adhesive', 'Levulinic Acid', 'Polyethylene Terephthalate Backing Film']
+    },
+    dosageAndAdministration: 'Apply one patch to clean, non-irritated intact skin on the upper outer arm, chest, or upper back for 7 days.',
+    packagingInfo: '4 Individually Sealed Child-Resistant Pouches per Box (1 Month Supply).',
+    storageConditions: 'Store below 25°C. Do not freeze.',
+    shelfLife: '24 Months',
+    regulatoryApprovals: ['US FDA', 'EU EMA', 'TGA Australia'],
+    isFeatured: false,
+    leafletCode: 'PIL-NRP-2026-V1',
+    imageUrl: 'https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&q=80&w=800',
+    rxRequired: true
+  },
+  {
+    id: 'aeth-012',
+    name: 'Kofup LS Drops',
+    genericName: 'Cefpodoxime Proxetil Taste-Masked Pediatric Drops',
+    category: 'Anti-Infectives',
+    dosageForm: 'Oral Suspension',
+    strength: '50mg / 5mL',
+    indication: 'Pediatric Acute Otitis Media, Streptococcal Pharyngitis, Lower Respiratory Infections',
+    shortDescription: 'Micro-encapsulated taste-masked oral cephalosporin suspension engineered for optimal pediatric compliance.',
+    fullOverview: 'Kofup LS Drops utilizes lipid micro-coating to completely eliminate antibiotic bitterness while maintaining 100% gastrointestinal bioavailability and gentle stomach tolerance.',
+    keyBenefits: [
+      'Micro-encapsulation eliminates bitter cephalosporin taste with pleasant fruit flavor',
+      'High pediatric compliance rate (>96% in clinical surveys)',
+      'Twice-daily shortened 5-to-7 day treatment course',
+      'Dosing pipette included for precision weight-based measurement'
+    ],
+    composition: {
+      activeIngredient: 'Cefpodoxime Proxetil IP',
+      concentration: '50mg Cefpodoxime equivalent per 5mL reconstituted suspension',
+      excipients: ['Sucrose', 'Xanthan Gum', 'Colloidal Silicon Dioxide', 'Natural Tutti-Frutti Flavor']
+    },
+    dosageAndAdministration: '10mg/kg/day divided every 12 hours as prescribed by pediatrician.',
+    packagingInfo: '100mL Amber Glass Bottle with measuring cup and oral syringe dropper.',
+    storageConditions: 'Reconstituted suspension must be refrigerated (2°C–8°C) and used within 14 days.',
+    shelfLife: '24 Months (Dry Powder)',
+    regulatoryApprovals: ['US FDA', 'EU EMA', 'WHO GMP'],
+    isFeatured: false,
+    leafletCode: 'PIL-PTOS-2026-V1',
+    imageUrl: 'https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&q=80&w=800',
+    rxRequired: true
+  },
+  {
+    id: 'aeth-013',
+    name: 'Kofup LS Junior',
+    genericName: 'Human Normal Immunoglobulin 16.5% Subcutaneous Solution',
+    category: 'Immunology',
+    dosageForm: 'Injectables',
+    strength: '165mg/mL (20mL Ready Vial)',
+    indication: 'Primary Immunodeficiency Disorders (PIDD), Secondary Hypogammaglobulinemia',
+    shortDescription: 'Ultra-pure liquid human IgG solution formulated for easy self-administered weekly subcutaneous infusion.',
+    fullOverview: 'Kofup LS Junior features a high-purity (>98% monomeric IgG) cold-ethanol fractionation process, providing stabilized antibody protection without intravenous clinic visits.',
+    keyBenefits: [
+      'Home self-infusion capability in 20-30 minutes',
+      'Ultra-low IgA content (<10mcg/mL) minimizing anaphylactoid risk',
+      'Stable IgG trough levels preventing systemic wear-off fatigue',
+      'Zero sugar, zero proline additives for optimal renal tolerability'
+    ],
+    composition: {
+      activeIngredient: 'Human Normal Immunoglobulin G (IgG)',
+      concentration: '16.5g/100mL (165mg/mL)',
+      excipients: ['Glycine', 'Water for Injection USP (pH 4.8)']
+    },
+    dosageAndAdministration: 'Subcutaneous infusion based on patient serum IgG levels and physician calculation.',
+    packagingInfo: 'Single-Use 20mL Type-I Glass Vial with flip-off safety seal.',
+    storageConditions: 'Store refrigerated at 2°C to 8°C. Protect from light.',
+    shelfLife: '36 Months',
+    regulatoryApprovals: ['US FDA', 'EU EMA', 'PMDA Japan', 'Health Canada'],
+    isFeatured: true,
+    leafletCode: 'PIL-IGSC-2026-V2',
+    imageUrl: 'https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&q=80&w=800',
+    rxRequired: true
+  },
+  {
+    id: 'aeth-014',
+    name: 'Mefmark Plus',
+    genericName: 'Levothyroxine Sodium Micro-Dose Tablets',
+    category: 'Metabolic',
+    dosageForm: 'Tablets',
+    strength: '88mcg',
+    indication: 'Hypothyroidism, Thyroid Hormone Replacement, TSH Suppression Therapy',
+    shortDescription: 'Precision-compressed thyroid hormone tablets guaranteeing ±1% potency uniformity across micro-dosages.',
+    fullOverview: 'Mefmark Plus resolves historical thyroid drug degradation by using nitrogen-purged blister packaging and moisture-resistant polymer binders.',
+    keyBenefits: [
+      'Guaranteed high potency uniformity across critical microgram titrations',
+      'Nitrogen-purged packaging prevents oxidative hormone degradation',
+      'Rapid dissolution within 5 minutes for predictable GI bio-absorption',
+      'Gluten-free, lactose-free hypo-allergenic formulation'
+    ],
+    composition: {
+      activeIngredient: 'Levothyroxine Sodium Synthetic USP',
+      concentration: '88mcg per tablet',
+      excipients: ['Mannitol', 'Microcrystalline Cellulose', 'Sodium Starch Glycolate', 'Acacia']
+    },
+    dosageAndAdministration: 'Take once daily on an empty stomach with a full glass of water, 30 to 60 minutes before breakfast.',
+    packagingInfo: '100 Tablet HDPE Bottle with desiccants.',
+    storageConditions: 'Store below 25°C away from light and humidity.',
+    shelfLife: '36 Months',
+    regulatoryApprovals: ['US FDA', 'EU EMA', 'WHO GMP'],
+    isFeatured: false,
+    leafletCode: 'PIL-TNP-2026-V1',
+    imageUrl: 'https://images.unsplash.com/photo-1550572017-edd951baa742?auto=format&fit=crop&q=80&w=800',
+    rxRequired: true
+  },
+  {
+    id: 'aeth-015',
+    name: 'Mefrark Plus DS',
+    genericName: 'Latanoprost & Timolol Maleate Preservative-Free Ophthalmic Drops',
+    category: 'Oncology',
+    dosageForm: 'Topicals',
+    strength: '0.005% / 0.5%',
+    indication: 'Open-Angle Glaucoma & Ocular Hypertension',
+    shortDescription: 'Preservative-free sterile eye drops in single-dose unit containers for IOP reduction without corneal surface toxicity.',
+    fullOverview: 'Mefrark Plus DS delivers synergistic prostaglandin analog and beta-blocker therapy without benzalkonium chloride (BAK), preventing dry eye syndrome and chronic corneal staining.',
+    keyBenefits: [
+      'Preservative-free formulation protects long-term ocular surface health',
+      'Dual mechanism lowers intraocular pressure (IOP) by up to 35%',
+      'Once-daily night-time instillation convenience',
+      'Single-use sterile blow-fill-seal (BFS) ampoules'
+    ],
+    composition: {
+      activeIngredient: 'Latanoprost USP / Timolol Maleate USP',
+      concentration: 'Latanoprost 50mcg/mL + Timolol 5mg/mL',
+      excipients: ['Sodium Dihydrogen Phosphate', 'Disodium Phosphate', 'Water for Injections']
+    },
+    dosageAndAdministration: 'Instill 1 drop in the affected eye(s) once daily in the evening.',
+    packagingInfo: '30 x 0.2mL Single-Dose BFS Ampoules in foil pouches.',
+    storageConditions: 'Store unopened pouches refrigerated at 2°C–8°C. Once opened, store below 25°C for 4 weeks.',
+    shelfLife: '24 Months',
+    regulatoryApprovals: ['US FDA', 'EU EMA', 'TGA Australia'],
+    isFeatured: false,
+    leafletCode: 'PIL-OVDX-2026-V1',
+    imageUrl: 'https://images.unsplash.com/photo-1577401239170-897942555fb3?auto=format&fit=crop&q=80&w=800',
+    rxRequired: true
+  },
+  {
+    id: 'aeth-016',
+    name: 'Mepra D',
+    genericName: 'Adalimumab Biosimilar Pre-Filled Auto-Injector Pen',
+    category: 'Immunology',
+    dosageForm: 'Injectables',
+    strength: '40mg / 0.4mL Pen',
+    indication: 'Rheumatoid Arthritis, Crohn’s Disease, Ankylosing Spondylitis, Plaque Psoriasis',
+    shortDescription: 'Citrate-free anti-TNF alpha monoclonal antibody delivered via ultra-gentle ergonomic auto-injector pen.',
+    fullOverview: 'Mepra D is a high-concentration citrate-free formulation engineered for painless 27-gauge needle injection, demonstrated to match originator bio-equivalence across all primary clinical endpoints.',
+    keyBenefits: [
+      'Citrate-free formulation reduces injection site pain by 84%',
+      'Pre-filled safety auto-injector with audible click completion feedback',
+      'Latex-free needle shield preventing allergic complications',
+      'Advanced 2°C-8°C cold-chain indicator on every individual pen wrapper'
+    ],
+    composition: {
+      activeIngredient: 'Adalimumab Recombinant Human Monoclonal Antibody',
+      concentration: '40mg / 0.4mL high concentration solution',
+      excipients: ['Mannitol', 'Polysorbate 80', 'Water for Injections']
+    },
+    dosageAndAdministration: '40mg subcutaneously every other week via self-injection pen.',
+    packagingInfo: 'Pack of 2 Pre-Filled Auto-Injectors with Alcohol Swabs.',
+    storageConditions: 'Store refrigerated at 2°C–8°C. May be stored at room temp up to 25°C for 14 days max.',
+    shelfLife: '36 Months',
+    regulatoryApprovals: ['US FDA', 'EU EMA', 'WHO GMP', 'ANVISA Brazil'],
+    isFeatured: true,
+    leafletCode: 'PIL-RFBX-2026-V3',
+    imageUrl: 'https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&q=80&w=800',
+    rxRequired: true
+  },
+  {
+    id: 'aeth-017',
+    name: 'Nerwiz Plus',
+    genericName: 'Melatonin & Daridorexant Sublingual Biphasic Tablet',
+    category: 'Neurology',
+    dosageForm: 'Tablets',
+    strength: '5mg / 25mg',
+    indication: 'Chronic Insomnia Disorder, Sleep-Onset Latency & Maintenance Impairment',
+    shortDescription: 'Biphasic dual-orexin receptor antagonist (DORA) combined with immediate-release melatonin for natural sleep architecture.',
+    fullOverview: 'Nerwiz Plus triggers sleep induction within 12 minutes while Daridorexant stabilizes stage 3 NREM delta sleep without next-day morning residual grogginess or dependence.',
+    keyBenefits: [
+      'Rapid sleep-onset induction combined with sustained 7-hour sleep maintenance',
+      'Preserves REM and deep delta sleep stage balance',
+      'Zero next-morning motor or cognitive hangover effect',
+      'Non-controlled substance classification with zero physical rebound risk'
+    ],
+    composition: {
+      activeIngredient: 'Daridorexant Hydrochloride / Melatonin Pure Grade',
+      concentration: 'Daridorexant 25mg + Melatonin 5mg',
+      excipients: ['Microcrystalline Cellulose', 'Croscarmellose Sodium', 'Peppermint Essential Oil']
+    },
+    dosageAndAdministration: '1 tablet taken sublingually 30 minutes before bedtime.',
+    packagingInfo: '3 x 10 Fast-Peel Blisters.',
+    storageConditions: 'Store below 25°C in dry dark space.',
+    shelfLife: '36 Months',
+    regulatoryApprovals: ['US FDA', 'EU EMA', 'PMDA Japan'],
+    isFeatured: false,
+    leafletCode: 'PIL-SSDM-2026-V1',
+    imageUrl: 'https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&q=80&w=800',
+    rxRequired: true
+  },
+  {
+    id: 'aeth-018',
+    name: 'Kwicoxy Baby',
+    genericName: 'Erythromycin Stearate Gastro-Resistant Tablets',
+    category: 'Anti-Infectives',
+    dosageForm: 'Tablets',
+    strength: '500mg',
+    indication: 'Upper & Lower Respiratory Tract Infections, Skin & Soft Tissue Infections, Chlamydial Infections',
+    shortDescription: 'Pioneering macrolide antibiotic with enteric acid-resistant coating for high oral bioavailability and superior gastric tolerance.',
+    fullOverview: 'Kwicoxy Baby continues Hallmark’s storied legacy as the pioneer of Erythromycin 500 mg tablets in the Indian pharmaceutical market. Formulated with an advanced enteric polymer shield that protects active erythromycin through gastric transit, ensuring maximal jejunal absorption and minimizing GI discomfort.',
+    keyBenefits: [
+      'Pioneered by Hallmark in the Indian pharmaceutical market with proven clinical efficacy',
+      'Enteric polymer coating eliminates acid-induced macrolide degradation',
+      'Broad-spectrum antimicrobial coverage across Gram-positive and atypical organisms',
+      'Safe alternative in penicillin-hypersensitive patients'
+    ],
+    composition: {
+      activeIngredient: 'Erythromycin Stearate IP',
+      concentration: 'Equivalent to Erythromycin 500mg',
+      excipients: ['Microcrystalline Cellulose', 'Cellulose Acetate Phthalate', 'Diethyl Phthalate', 'Colloidal Silicon Dioxide', 'Magnesium Stearate']
+    },
+    dosageAndAdministration: 'One 500mg tablet every 6 to 8 hours on an empty stomach with a full glass of water.',
+    packagingInfo: '10 x 10 Alu-Alu Blister Pack with tamper-evident seal.',
+    storageConditions: 'Store below 25°C in a dry place. Protect from moisture and light.',
+    shelfLife: '36 Months',
+    regulatoryApprovals: ['WHO GMP', 'CDSCO India', 'ISO 9001:2015'],
+    isFeatured: true,
+    leafletCode: 'PIL-ERYTH-2026-V1',
+    imageUrl: 'https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&q=80&w=800',
+    rxRequired: true
+  },
+  {
+    id: 'aeth-019',
+    name: 'Kwicoxy Child',
+    genericName: 'Amlodipine Besylate & Atorvastatin Calcium Tablets',
+    category: 'Cardiology',
+    dosageForm: 'Tablets',
+    strength: '5mg / 20mg',
+    indication: 'Hypertension Comorbid with Dyslipidemia, Prevention of Cardiovascular Events',
+    shortDescription: 'Synergistic fixed-dose single-pill combination targeting vascular wall tension and lipid plaque stabilization simultaneously.',
+    fullOverview: 'Kwicoxy Child combines the third-generation dihydropyridine calcium channel blocker Amlodipine with the potent HMG-CoA reductase inhibitor Atorvastatin. Engineered with dual-layer micro-granulation to prevent cross-API degradation and ensure identical pharmacokinetics to co-administered individual doses.',
+    keyBenefits: [
+      'Single-pill simplicity dramatically increases chronic cardiovascular medication adherence',
+      'Significantly lowers systemic vascular resistance and reduces LDL-C by up to 45%',
+      'Dual endothelial stabilization and anti-inflammatory pleiotropic vascular benefits',
+      'Predictable 24-hour plasma half-life with round-the-clock protection'
+    ],
+    composition: {
+      activeIngredient: 'Amlodipine Besylate IP & Atorvastatin Calcium Trihydrate IP',
+      concentration: 'Amlodipine 5mg + Atorvastatin 20mg',
+      excipients: ['Calcium Carbonate', 'Microcrystalline Cellulose', 'Pregelatinized Starch', 'Croscarmellose Sodium', 'Opadry White Film Coat']
+    },
+    dosageAndAdministration: 'One tablet once daily at any time of day, with or without food.',
+    packagingInfo: '10 x 10 Moisture-Proof Alu-Alu Strip Pack.',
+    storageConditions: 'Store below 25°C. Protect from light and excessive moisture.',
+    shelfLife: '36 Months',
+    regulatoryApprovals: ['WHO GMP', 'EU EMA', 'CDSCO India'],
+    isFeatured: true,
+    leafletCode: 'PIL-CVAS-2026-V2',
+    imageUrl: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=800',
+    rxRequired: true
+  },
+  {
+    id: 'aeth-020',
+    name: 'Clausihal',
+    genericName: 'Natural Micronized Progesterone Sustained Release Tablets',
+    category: 'Gastroenterology',
+    dosageForm: 'Tablets',
+    strength: '300mg',
+    indication: 'Luteal Phase Support in ART, Threatened Miscarriage, Secondary Amenorrhea & Dysfunctional Uterine Bleeding',
+    shortDescription: 'Bio-identical micronized progesterone formulated in a hydrophilic sustained-release matrix for uniform endocrinological support.',
+    fullOverview: 'Clausihal delivers physiological levels of natural bio-identical progesterone through a specialized sustained-release matrix that mitigates the sudden sedative peaks associated with conventional micronized capsules while providing consistent 24-hour luteal phase priming in gynecological care.',
+    keyBenefits: [
+      'Eliminates peak-associated drowsiness and daytime fatigue',
+      'High-affinity endometrial decidualization for reproductive and gynecological care',
+      'Non-androgenic, non-teratogenic bio-identical molecular profile',
+      'Once or twice daily flexible dosing tailored for fertility and maternal health protocols'
+    ],
+    composition: {
+      activeIngredient: 'Natural Micronized Progesterone USP',
+      concentration: '300mg Micronized Progesterone',
+      excipients: ['Hypromellose K15M', 'Lactose Monohydrate', 'Colloidal Silicon Dioxide', 'Magnesium Stearate']
+    },
+    dosageAndAdministration: '200mg to 300mg orally once or twice daily as prescribed by the specialist.',
+    packagingInfo: '10 x 10 Blister Pack with desiccated tropical cold-forming foil.',
+    storageConditions: 'Store between 15°C and 25°C in a dry environment.',
+    shelfLife: '24 Months',
+    regulatoryApprovals: ['WHO GMP', 'CDSCO India', 'ISO 9001:2015'],
+    isFeatured: true,
+    leafletCode: 'PIL-GCSR-2026-V1',
+    imageUrl: 'https://images.unsplash.com/photo-1550572017-edd951baa742?auto=format&fit=crop&q=80&w=800',
+    rxRequired: true
+  },
+  {
+    id: 'aeth-021',
+    name: 'FreLM',
+    genericName: 'Dicyclomine Hydrochloride & Activated Dimethicone Drops',
+    category: 'Gastroenterology',
+    dosageForm: 'Oral Suspension',
+    strength: '10mg / 40mg per mL',
+    indication: 'Infantile Colic, Spasmodic Gastrointestinal Cramps, Functional Flatulence in Paediatrics',
+    shortDescription: 'Gentle antispasmodic and defoaming oral drops with calibrated dropper for precise pediatric administration.',
+    fullOverview: 'FreLM provides targeted relief for infantile colic and abdominal distress. Dicyclomine relaxes smooth visceral musculature while activated Dimethicone reduces the surface tension of trapped intestinal gas bubbles, facilitating easy expulsion with zero systemic irritation.',
+    keyBenefits: [
+      'Rapid relief within 15 minutes of administration for colicky distress',
+      'Calibrated dropper ensures drop-by-drop pediatric dosing accuracy',
+      'Pleasant raspberry flavor designed for pediatric palatability and zero spit-out',
+      'Alcohol-free, paraben-free, sugar-free gentle pediatric formulation'
+    ],
+    composition: {
+      activeIngredient: 'Dicyclomine Hydrochloride IP & Activated Dimethicone IP',
+      concentration: 'Each mL contains Dicyclomine HCl 10mg + Dimethicone 40mg',
+      excipients: ['Purified Water', 'Glycerin', 'Sorbitol Solution', 'Natural Raspberry Flavor', 'Sodium Benzoate']
+    },
+    dosageAndAdministration: 'Infants over 6 months: 5 to 10 drops 15 minutes before feed, up to 3-4 times daily as directed by the pediatrician.',
+    packagingInfo: '15mL Amber Glass Bottle with Calibrated Safety Dropper.',
+    storageConditions: 'Store below 25°C. Do not freeze. Keep bottle tightly closed.',
+    shelfLife: '24 Months',
+    regulatoryApprovals: ['WHO GMP', 'CDSCO India'],
+    isFeatured: false,
+    leafletCode: 'PIL-PSOD-2026-V1',
+    imageUrl: 'https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&q=80&w=800',
+    rxRequired: true
+  },
+  {
+    id: 'aeth-022',
+    name: 'FreLM Syrup',
+    genericName: 'Levosalbutamol & Ipratropium Bromide Inhalation Solution',
+    category: 'Respiratory',
+    dosageForm: 'Inhalers',
+    strength: '1.25mg / 500mcg per 2.5mL',
+    indication: 'Acute Exacerbation of Bronchial Asthma, Chronic Obstructive Pulmonary Disease (COPD) Bronchospasm',
+    shortDescription: 'Preservative-free sterile nebulization respules offering dual beta-2 agonist and anticholinergic bronchodilation.',
+    fullOverview: 'FreLM Syrup combines the pure (R)-enantiomer of albuterol (Levosalbutamol) with the quaternary ammonium anticholinergic Ipratropium Bromide. Engineered to deliver rapid airway lumen reopening with minimal (S)-isomer cardiac tremors or palpitations.',
+    keyBenefits: [
+      'Rapid onset within 3 to 5 minutes providing acute emergency relief',
+      'Up to 50% fewer cardiac palpitations compared to racemic albuterol',
+      'Synergistic bronchodilatory action expanding both large and peripheral airways',
+      'Preservative-free sterile unit-dose blow-fill-seal ampoules'
+    ],
+    composition: {
+      activeIngredient: 'Levosalbutamol Sulphate IP & Ipratropium Bromide IP',
+      concentration: 'Levosalbutamol 1.25mg + Ipratropium Bromide 500mcg in 2.5mL sterile isotonic solution',
+      excipients: ['Sodium Chloride', 'Sulfuric Acid / Sodium Hydroxide (pH buffer)', 'Sterile Water for Injections']
+    },
+    dosageAndAdministration: 'Administer one 2.5mL unit dose via jet nebulizer connected to a facemask or mouthpiece over 10-15 minutes.',
+    packagingInfo: '5 x 5 (25 Respules) sterile blow-fill-seal strips in protected foil pouches.',
+    storageConditions: 'Store below 25°C. Protect from light. Do not freeze.',
+    shelfLife: '24 Months',
+    regulatoryApprovals: ['WHO GMP', 'EU EMA', 'CDSCO India'],
+    isFeatured: true,
+    leafletCode: 'PIL-PCRP-2026-V2',
+    imageUrl: 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&q=80&w=800',
+    rxRequired: true
+  },
+  {
+    id: 'aeth-023',
+    name: 'Probitec',
+    genericName: 'Diacerein, Glucosamine Sulfate Potassium & MSM Film-Coated Tablets',
+    category: 'Immunology',
+    dosageForm: 'Tablets',
+    strength: '50mg / 750mg / 250mg',
+    indication: 'Osteoarthritis, Degenerative Joint Disease, Cartilage Breakdown & Chronic Articular Pain',
+    shortDescription: 'Triple-action disease-modifying osteoarthritis drug (DMOAD) formulation promoting chondrocyte regeneration and synovial lubrication.',
+    fullOverview: 'Probitec couples Diacerein (an IL-1 beta inhibitor) with bioavailable crystalline Glucosamine Sulfate and organic Methylsulfonylmethane (MSM). Clinically targeted to slow articular cartilage thinning, alleviate stiffness, and reduce long-term NSAID dependency.',
+    keyBenefits: [
+      'Interleukin-1 beta inhibition protects chondrocytes and slows disease progression',
+      'Promotes proteoglycan and glycosaminoglycan matrix synthesis',
+      'Significant reduction in joint tenderness and functional stiffness within 4 weeks',
+      'Reduces reliance on gastric-damaging NSAIDs'
+    ],
+    composition: {
+      activeIngredient: 'Diacerein IP, Glucosamine Sulfate Potassium Chloride IP, Methylsulfonylmethane USP',
+      concentration: 'Diacerein 50mg + Glucosamine Sulfate 750mg + MSM 250mg',
+      excipients: ['Povidone K30', 'Microcrystalline Cellulose', 'Sodium Starch Glycolate', 'Opadry Yellow Coating']
+    },
+    dosageAndAdministration: 'One tablet twice daily with meals for a minimum course of 8 to 12 weeks.',
+    packagingInfo: '10 x 10 Alu-Alu Blister Pack.',
+    storageConditions: 'Store in a dry place below 25°C. Keep protected from direct sunlight.',
+    shelfLife: '36 Months',
+    regulatoryApprovals: ['WHO GMP', 'CDSCO India', 'ISO 9001:2015'],
+    isFeatured: false,
+    leafletCode: 'PIL-AFUX-2026-V1',
+    imageUrl: 'https://images.unsplash.com/photo-1577401239170-897942555fb3?auto=format&fit=crop&q=80&w=800',
+    rxRequired: true
+  },
+  {
+    id: 'aeth-024',
+    name: 'LG9',
+    genericName: 'L-Ornithine L-Aspartate & Silymarin Bio-Enhanced Tablets',
+    category: 'Gastroenterology',
+    dosageForm: 'Tablets',
+    strength: '150mg / 140mg',
+    indication: 'Non-Alcoholic Fatty Liver Disease (NAFLD), Hepatic Steatosis, Drug-Induced Liver Injury, Chronic Hepatitis',
+    shortDescription: 'Advanced hepatoprotective formulation stimulating hepatic urea cycle detox and hepatocellular cell wall membrane stabilization.',
+    fullOverview: 'LG9 delivers pharmaceutical-grade L-Ornithine L-Aspartate (LOLA) paired with high-purity Silymarin standardized to 80% silibinins. Accelerates clearance of neurotoxic ammonia via the Krebs-Henseleit cycle while neutralizing lipid peroxidative radical damage in hepatocyte membranes.',
+    keyBenefits: [
+      'Substantially lowers serum ALT, AST, and alkaline phosphatase biomarkers',
+      'Stimulates hepatic regeneration and ribosomal RNA synthesis',
+      'Potent antioxidant protection against chemical and drug-induced hepatotoxicity',
+      'Reverses liver steatosis and improves mitochondrial energy production'
+    ],
+    composition: {
+      activeIngredient: 'L-Ornithine L-Aspartate USP & Milk Thistle Extract (Silymarin 80%)',
+      concentration: 'LOLA 150mg + Silymarin 140mg (Eq to 112mg active Silibinin)',
+      excipients: ['Lactose Monohydrate', 'Colloidal Anhydrous Silica', 'Croscarmellose Sodium', 'Iron Oxide Yellow', 'Film Coating Polymer']
+    },
+    dosageAndAdministration: 'One tablet two to three times daily after meals.',
+    packagingInfo: '10 x 10 Strip Pack in pharmaceutical carton.',
+    storageConditions: 'Store below 25°C in a dry place protected from heat.',
+    shelfLife: '36 Months',
+    regulatoryApprovals: ['WHO GMP', 'CDSCO India'],
+    isFeatured: false,
+    leafletCode: 'PIL-HSFT-2026-V1',
+    imageUrl: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=800',
+    rxRequired: true
+  },
+  {
+    id: 'aeth-025',
+    name: 'Ace 650',
+    genericName: 'Citicoline Sodium & Piracetam Film-Coated Tablets',
+    category: 'Neurology',
+    dosageForm: 'Tablets',
+    strength: '500mg / 800mg',
+    indication: 'Acute Ischemic Stroke Rehabilitation, Cognitive Impairment, Head Trauma Recovery, Vascular Dementia',
+    shortDescription: 'Synergistic nootropic and neurorehabilitative tablet accelerating neuronal membrane phosphatidylcholine synthesis.',
+    fullOverview: 'Ace 650 integrates the brain phospholipid precursor Citicoline with the classic nootropic modulator Piracetam. Reconstructs damaged neuronal membranes post-ischemic insult, restores acetylcholine synthesis, and enhances microvascular cerebral blood flow without causing systemic hypotension.',
+    keyBenefits: [
+      'Accelerates motor, sensory, and speech rehabilitation in post-stroke recovery',
+      'Restores neuronal cell membrane integrity and diminishes free fatty acid accumulation',
+      'Improves cerebral oxygenation and ATP synthesis in ischemic penumbra',
+      'Enhances executive function, memory retrieval, and alertness'
+    ],
+    composition: {
+      activeIngredient: 'Citicoline Sodium IP & Piracetam IP',
+      concentration: 'Citicoline 500mg + Piracetam 800mg',
+      excipients: ['Microcrystalline Cellulose', 'Sodium Starch Glycolate', 'Magnesium Stearate', 'Opadry Pink Coating']
+    },
+    dosageAndAdministration: 'One tablet twice daily with or after meals, or as advised by the neurologist.',
+    packagingInfo: '10 x 10 Alu-Alu Blister Pack.',
+    storageConditions: 'Store below 30°C in a dry place. Protect from moisture.',
+    shelfLife: '36 Months',
+    regulatoryApprovals: ['WHO GMP', 'CDSCO India'],
+    isFeatured: true,
+    leafletCode: 'PIL-NVAL-2026-V2',
+    imageUrl: 'https://images.unsplash.com/photo-1577401239170-897942555fb3?auto=format&fit=crop&q=80&w=800',
+    rxRequired: true
+  },
+  {
+    id: 'aeth-026',
+    name: 'Ranihal',
+    genericName: 'Metformin Hydrochloride Extended-Release & Vildagliptin Tablets',
+    category: 'Metabolic',
+    dosageForm: 'Tablets',
+    strength: '1000mg / 50mg',
+    indication: 'Type 2 Diabetes Mellitus Inadequately Controlled with Monotherapy',
+    shortDescription: 'Glucose-dependent DPP-4 inhibitor combined with extended-release biguanide for smooth 24-hour glycemic control without hypoglycemia.',
+    fullOverview: 'Ranihal combines the incretin enhancer Vildagliptin with sustained-release Metformin. Stimulates insulin secretion and suppresses glucagon release strictly in response to elevated blood glucose, avoiding unexpected hypoglycemic episodes while improving insulin sensitivity in peripheral tissues.',
+    keyBenefits: [
+      'Substantial HbA1c reduction up to 1.5% with near-zero risk of hypoglycemia',
+      'Weight-neutral therapeutic profile with excellent gastrointestinal tolerance',
+      'Protects pancreatic beta-cell mass and enhances physiological islet secretory response',
+      'Convenient once or twice daily extended-release regimen'
+    ],
+    composition: {
+      activeIngredient: 'Metformin Hydrochloride IP & Vildagliptin IP',
+      concentration: 'Metformin HCl 1000mg (Extended Release) + Vildagliptin 50mg',
+      excipients: ['Hydroxypropyl Methylcellulose K100M', 'Microcrystalline Cellulose', 'Magnesium Stearate', 'Colloidal Silicon Dioxide']
+    },
+    dosageAndAdministration: 'One tablet once or twice daily with meals in the morning and evening.',
+    packagingInfo: '10 x 10 Alu-Alu Blister Pack.',
+    storageConditions: 'Store below 25°C. Protect from moisture.',
+    shelfLife: '36 Months',
+    regulatoryApprovals: ['WHO GMP', 'EU EMA', 'CDSCO India'],
+    isFeatured: false,
+    leafletCode: 'PIL-GMDER-2026-V1',
+    imageUrl: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=800',
+    rxRequired: true
+  },
+  {
+    id: 'aeth-027',
+    name: 'LBS',
+    genericName: 'Cefpodoxime Proxetil for Oral Suspension IP',
+    category: 'Anti-Infectives',
+    dosageForm: 'Oral Suspension',
+    strength: '50mg / 5mL',
+    indication: 'Pediatric Acute Otitis Media, Pharyngitis/Tonsillitis, Community-Acquired Pneumonia, Uncomplicated UTIs',
+    shortDescription: 'Third-generation broad-spectrum oral cephalosporin dry syrup formulated specifically for high compliance in pediatric infections.',
+    fullOverview: 'LBS is an extended-spectrum oral cephalosporin prodrug designed for pediatric clinical practice. Demonstrates stability against common bacterial beta-lactamases and achieves rapid therapeutic tissue concentrations in middle ear fluid, tonsillar tissue, and respiratory mucosa.',
+    keyBenefits: [
+      'Broad-spectrum bactericidal activity against Streptococcus pneumoniae, Haemophilus influenzae, and Moraxella catarrhalis',
+      'High stability against beta-lactamase enzyme degradation',
+      'Delicious strawberry-vanilla flavor formulated to eliminate metallic aftertaste and ensure pediatric compliance',
+      'Supplied with calibrated measuring cup and sterile water for reconstitution'
+    ],
+    composition: {
+      activeIngredient: 'Cefpodoxime Proxetil IP',
+      concentration: 'Each 5mL of reconstituted suspension contains Cefpodoxime Proxetil equivalent to Cefpodoxime 50mg',
+      excipients: ['Sucrose', 'Microcrystalline Cellulose & Carmellose Sodium', 'Silicon Dioxide', 'Natural Strawberry Flavor', 'Sodium Benzoate']
+    },
+    dosageAndAdministration: '5mg/kg body weight every 12 hours for 5 to 10 days, taken with meals to enhance oral absorption.',
+    packagingInfo: '30mL HDPE Bottle with calibrated measuring cup and pure sterile water ampoule.',
+    storageConditions: 'Store dry powder below 25°C. After reconstitution with sterile water, store in refrigerator (2°C–8°C) and use within 14 days.',
+    shelfLife: '24 Months',
+    regulatoryApprovals: ['WHO GMP', 'CDSCO India'],
+    isFeatured: true,
+    leafletCode: 'PIL-CPDS-2026-V1',
+    imageUrl: 'https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&q=80&w=800',
+    rxRequired: true
+  }
+];

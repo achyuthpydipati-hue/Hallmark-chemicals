@@ -1,0 +1,6 @@
+{
+  "name": "Hallmark Chemicals",
+  "description": "Global pharmaceutical and chemical enterprise leading advanced therapeutic formulations, specialty chemical manufacturing, and life-changing healthcare solutions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
